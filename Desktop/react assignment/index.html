@@ -1,0 +1,83 @@
+!<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Counter App</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: linear-gradient(135deg, #667eea, #764ba2);
+      color: white;
+      text-align: center;
+      margin-top: 100px;
+    }
+
+    .container {
+      background: rgba(255, 255, 255, 0.1);
+      padding: 30px;
+      border-radius: 15px;
+      display: inline-block;
+    }
+
+    h1 {
+      margin-bottom: 20px;
+    }
+
+    #count {
+      font-size: 50px;
+      margin: 20px 0;
+    }
+
+    button {
+      padding: 10px 20px;
+      margin: 10px;
+      font-size: 16px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .inc { background: #28a745; color: white; }
+    .dec { background: #dc3545; color: white; }
+    .reset { background: #ffc107; color: black; }
+
+    button:hover {
+      transform: scale(1.1);
+      opacity: 0.9;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <h1>Counter App</h1>
+    <div id="count">0</div>
+
+    <button class="inc" onclick="increment()">➕ Increment</button>
+    <button class="dec" onclick="decrement()">➖ Decrement</button>
+    <button class="reset" onclick="reset()">🔄 Reset</button>
+  </div>
+
+  <script>
+    let count = 0;
+    const display = document.getElementById("count");
+
+    function increment() {
+      count++;
+      display.innerText = count;
+    }
+
+    function decrement() {
+      count--;
+      display.innerText = count;
+    }
+
+    function reset() {
+      count = 0;
+      display.innerText = count;
+    }
+  </script>
+
+</body>
+</html>
